@@ -1,42 +1,38 @@
 /**
- *
  * @author Jonathan
  */
 public class ProblemaBElementos {
-	static java.util.Scanner in;
-        // excluidas vocales
-        static String letras = "bBcCdDfFgGhHjJkKlLmMnNpPqQrRsStTvVwWxXyYzZ";
-                
-	public static void casoDePrueba(){
-            
-            String line = in.nextLine();
-            int[] pos = new int[line.length()];
-            String consonante;
-            boolean orden = true;
-            
-            for (int i = 0; i < line.length(); i++) {
-                consonante = line.substring(i, i+1);
-                if(letras.contains(consonante)){
-                    pos[i] = letras.indexOf(consonante);
-                } else{
-                    pos[i] = -1;
-                }
+    static java.util.Scanner in;
+    static String letras = "AEIOU";
+    static StringBuilder sb = new StringBuilder();
+
+    public static void casoDePrueba(){
+        String line = in.next();
+        line = line.toUpperCase();
+        String consonante;
+        String aux;
+        boolean orden = false;
+        for (int i = 0; i < line.length(); i++) {
+            consonante = line.substring(i, i+1);
+            if(!letras.contains(consonante)){
+               sb.append(consonante);
             }
-            for (int e = 0; e < pos.length-1 & orden; e++) {
-                if(pos[e]!=-1){
-                    // si: pos[e] <= pos[e+1] ... "ERROR". Ej: BC "ERROR"
-                    if(!(pos[e] <= pos[e+1])) orden = false;  
-                }
-            }
-            if (orden) System.out.println("OK");
-            else System.out.println("ERROR");
-	}
-	
-	public static void main(String args[]){
-            in = new java.util.Scanner(System.in);
-            int numCasos = in.nextInt();
-            for (int i = 0; i <	numCasos; i++){
-                casoDePrueba();
-            }
-	}
+        }
+        for (int e = 0; e < sb.length()-1 & !orden; e++) {
+            // si: sb.charAt(e) <= sb.charAt(e+1) ... 
+            // "ERROR".     Ej: BC "ERROR"
+            if(!(sb.charAt(e) <= sb.charAt(e+1))) orden = true;
+        }
+        if (orden && sb.length() >= 2) System.out.println("OK");
+        else System.out.println("ERROR");
+        sb.delete(0, sb.length());
+    }
+
+    public static void main(String args[]){
+        in = new java.util.Scanner(System.in);
+        int numCasos = in.nextInt();
+        for (int i = 0; i < numCasos; i++){
+            casoDePrueba();
+        }
+    }
 }

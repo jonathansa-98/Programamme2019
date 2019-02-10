@@ -7,7 +7,7 @@ public class ProblemaCPrimos {
     
     public static boolean isPrime(int num) {
         if (num % 2 == 0) return false;
-        for (int div = 3; div <= Math.sqrt(num); div+=2) {
+        for (int div = 3; div*div <= num; div+=2) {
             if (num % div == 0) return false;
         }
         return true;
