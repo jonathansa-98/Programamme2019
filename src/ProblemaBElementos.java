@@ -23,11 +23,11 @@ public class ProblemaBElementos {
         else System.out.println("ERROR");
     }
 
-    public static void main(String args[]){
+    /*public static void main(String args[]){
         in = new java.util.Scanner(System.in);
         int numCasos = in.nextInt();
         for (int i = 0; i < numCasos; i++){
             casoDePrueba();
         }
-    }
+    }*/
 }
