@@ -1,10 +1,11 @@
 /**
- *
  * @author Jonathan
  */
 public class Entradas_aceptadas {}
 
-/*Pruebas limitadas (for casos)*/
+/*    static java.util.Scanner in; */
+
+//Pruebas limitadas (for casos)
 /*
 class solution{
 	static java.util.Scanner in;
@@ -27,7 +28,7 @@ class solution{
 }
 */
 
-/*Prueba acotado por casos especiales (entrada de un 0...)*/
+//Prueba acotado por casos especiales (entrada de un 0...)
 /*
 class solution2{
 	static java.util.Scanner in;
@@ -50,7 +51,7 @@ class solution2{
 }
 */
 
-/*Prueba hasta que acaben de entregar casos el juez (acaba el fichero de pruebas...)*/
+//Prueba hasta que acaben de entregar casos el juez (acaba el fichero de pruebas...)
 /*
 class solution3{
 	static java.util.Scanner in;

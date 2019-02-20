@@ -1,9 +1,9 @@
 import java.util.Scanner;
 /**
- *
  * @author Jonathan
  */
 public class ProblemaCPrimos {
+    static Scanner in;
     
     public static boolean isPrime(int num) {
         if (num % 2 == 0) return false;
@@ -14,9 +14,9 @@ public class ProblemaCPrimos {
     }
     
     /*public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        in = new Scanner(System.in);
         byte casos;
-        casos = sc.nextByte();
+        casos = in.nextByte();
         
         StringBuilder num_sb = new StringBuilder();
         int cont;
@@ -24,7 +24,7 @@ public class ProblemaCPrimos {
         
         for(byte n = 0; n < casos; n++){
             cont = 0;
-            num = sc.nextInt();
+            num = in.nextInt();
             for(int i = 2; i <= num; i++){
                 if(isPrime(i)){
                     num_sb.append(i);

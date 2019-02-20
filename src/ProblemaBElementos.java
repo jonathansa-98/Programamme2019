@@ -1,8 +1,9 @@
+import java.util.Scanner;
 /**
  * @author Jonathan
  */
 public class ProblemaBElementos {
-    static java.util.Scanner in;
+    static Scanner in;
     static String letras = "AEIOU";
 
     public static void casoDePrueba(){

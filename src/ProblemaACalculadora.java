@@ -1,10 +1,9 @@
+import java.util.Scanner;
 /**
- *
  * @author Jonathan
  */
 public class ProblemaACalculadora {
-    
-    static java.util.Scanner in;
+    static Scanner in;
 
     public static String casoDePrueba(){
         int n1 = in.nextInt();
@@ -24,7 +23,7 @@ public class ProblemaACalculadora {
     }
 
     /*public static void main(String args[]){
-        in = new java.util.Scanner(System.in);
+        in = new Scanner(System.in);
         int numCasos = in.nextInt();
         for (int i = 0; i < numCasos; i++){
             System.out.println(casoDePrueba());
